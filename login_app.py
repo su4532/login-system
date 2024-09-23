@@ -81,4 +81,4 @@ def logout():
 #     db.notes.delete_one({"_id": ObjectId(note_id)})
 #     return redirect("/")
 
-app.run(debug=True, host='0.0.0.0')
+app.run(host='0.0.0.0')
