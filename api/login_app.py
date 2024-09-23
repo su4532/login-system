@@ -32,6 +32,7 @@ db = client["youngwonks_database"]
 app = Flask("Login System")
 app.secret_key = sha256_crypt.hash("secret key")
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     # if request.method == "GET":
@@ -76,9 +77,10 @@ def logout():
     flash("You are now logged out.")
     return redirect("/")
 
+
 # @app.route("/delete/<note_id>", methods=["GET", "POST"])
 # def delete_noteid(note_id):
 #     db.notes.delete_one({"_id": ObjectId(note_id)})
 #     return redirect("/")
 
-app.run(host='0.0.0.0')
+app.run(debug=False, host='0.0.0.0')
