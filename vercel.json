@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "Login System/login_app.py",
+      "src": "login_app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Login System/login_app.py"
+      "dest": "login_app.py"
     }
   ]
 }
